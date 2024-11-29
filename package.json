@@ -1,0 +1,19 @@
+{
+  "name": "uptime-monitoring-api-raw-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "javascript",
+    "node-js"
+  ],
+  "author": "Mehedi Hasan",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "prettier": "^3.3.3"
+  }
+}
