@@ -5,6 +5,7 @@
  * Date: 11/21/2020
  *
  */
+
 // dependencies
 const data = require('../../lib/data');
 const { hash } = require('../../helpers/utilities');
@@ -15,6 +16,7 @@ const handler = {};
 
 handler.userHandler = (requestProperties, callback) => {
     const acceptedMethods = ['get', 'post', 'put', 'delete'];
+
     if (acceptedMethods.indexOf(requestProperties.method) > -1) {
         handler._users[requestProperties.method](requestProperties, callback);
     } else {
