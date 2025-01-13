@@ -1,8 +1,8 @@
 /*
  * Title: User Handler
  * Description: Handler to handle user related routes
- * Author: Sumit Saha ( Learn with Sumit )
- * Date: 11/21/2020
+ * Author: Mehedi Hasan
+ * Date: 11/21/2024
  *
  */
 
@@ -68,6 +68,7 @@ handler._users.post = (requestProperties, callback) => {
                     password: hash(password),
                     tosAgreement,
                 };
+
                 // store the user to db
                 data.create('users', phone, userObject, (err2) => {
                     if (!err2) {
