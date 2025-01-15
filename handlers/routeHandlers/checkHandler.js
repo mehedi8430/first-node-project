@@ -323,7 +323,8 @@ handler._check.delete = (requestProperties, callback) => {
                                         parseJSON(checkData).userPhone,
                                         (err3, userData) => {
                                             const userObject = parseJSON(userData);
-                                            if (!err3 && userData) {
+
+                                            if (!err3 && userObject) {
                                                 const userChecks =
                                                     typeof userObject.checks === 'object' &&
                                                     userObject.checks instanceof Array
@@ -332,6 +333,7 @@ handler._check.delete = (requestProperties, callback) => {
 
                                                 // remove the deleted check id from user's list of checks
                                                 const checkPosition = userChecks.indexOf(id);
+
                                                 if (checkPosition > -1) {
                                                     userChecks.splice(checkPosition, 1);
                                                     // resave the user data
